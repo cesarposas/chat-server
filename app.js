@@ -5,7 +5,7 @@ var express = require('express');
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
-const api = require('./routes');
+const api = require('./lib/routes');
 
 
 app.use(bodyParser.urlencoded({ extended: false}));
@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 // Routing
 app.use('/chat-server', api);
-app.use(express.static(path.join(__dirname, 'views')));
+app.use(express.static(path.join(__dirname + '/lib', 'views')));
 
   
 

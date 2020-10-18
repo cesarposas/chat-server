@@ -1,4 +1,5 @@
 module.exports = {
     port: process.env.PORT || 3000,
-    db: process.env.MONGODB || 'mongodb://localhost:27017/chat-server'
+    db: process.env.MONGODB || 'mongodb://localhost:27017/chat-server',
+    SECRET_TOKEN: 'myKeyToSecretToken'
 }
